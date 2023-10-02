@@ -1,9 +1,9 @@
 import streamlit as st
-import modules.tools as flexin
+import tools as flexin
 
 st.set_page_config(
     page_title="Sound Tube Converter",
-    page_icon="media\\favicon.ico",
+    #page_icon="media\\favicon.ico",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
