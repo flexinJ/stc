@@ -8,16 +8,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-ads = """
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1382825293057547"crossorigin="anonymous"></script>
-"""
-
-meta = """
-    <meta name="google-adsense-account" content="ca-pub-1382825293057547">
-"""
-
-st.write(meta, unsafe_allow_html=True)
-
 with st.form(key = "form", clear_on_submit=True):
     
     st.code("📹 transforming YouTube videos into wav format 🎵", language="python")
@@ -45,8 +35,6 @@ with st.form(key = "form", clear_on_submit=True):
             st.progress(value=100, text="download completed")
 
             flexin.Video(url).download()
-
-st.write(f"<head>{ads}</head>", unsafe_allow_html=True)
 
 baseboard = """
     <center>© 2023 flexin corp®️ - all rights reserved.</center>
