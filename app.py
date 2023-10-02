@@ -9,17 +9,14 @@ st.set_page_config(
 )
 
 ads = """
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1382825293057547"
-        crossorigin="anonymous"></script>
-    <!-- conversor_flexin_corp_monetize -->
-    <ins class="adsbygoogle"
-        style="display:inline-block;width:728px;height:90px"
-        data-ad-client="ca-pub-138282529305 7547"
-        data-ad-slot="7992689718"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1382825293057547"crossorigin="anonymous"></script>
 """
+
+meta = """
+    <meta name="google-adsense-account" content="ca-pub-1382825293057547">
+"""
+
+st.write(meta, unsafe_allow_html=True)
 
 with st.form(key = "form", clear_on_submit=True):
     
@@ -49,7 +46,7 @@ with st.form(key = "form", clear_on_submit=True):
 
             flexin.Video(url).download()
 
-st.write(ads, unsafe_allow_html=True)
+st.write(f"<head>{ads}</head>", unsafe_allow_html=True)
 
 baseboard = """
     <center>© 2023 flexin corp®️ - all rights reserved.</center>
