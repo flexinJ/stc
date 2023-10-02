@@ -34,10 +34,12 @@ with st.form(key = "form", clear_on_submit=True):
             
             st.progress(value=100, text="download completed")
 
-            flexin.Video(url).download()
+            done = flexin.Video(url).download()
+
+            print(done)
 
 baseboard = """
-    <center>© 2023 flexin corp®️ - all rights reserved.</center>
+    <center>© 2023 flexin®️ - all rights reserved.</center>
 """
 
 st.write(baseboard, unsafe_allow_html=True)
